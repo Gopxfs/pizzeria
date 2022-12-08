@@ -4,7 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  scope '/api', defaults: {formats: :json} do
-    get :orders, to: 'orders#index'
-  end
+  get :orders, to: 'api/orders#index', format: :json
 end
